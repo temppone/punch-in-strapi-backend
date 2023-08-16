@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "employee_clocks",
+  "info": {
+    "singularName": "employee-clock",
+    "pluralName": "employee-clocks",
+    "displayName": "Clocks",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "clock": {
+      "type": "time"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "clocks"
+    }
+  }
+}
